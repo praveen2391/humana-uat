@@ -1,0 +1,1 @@
+# Customer log analytics workspace

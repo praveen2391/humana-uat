@@ -38,3 +38,17 @@
     ```
 
     
+## Terraform commands:
+```
+terterraform_1.0.11.exe init -var-file=/c/Users/fatte/humana/git/humana-uat/zone.tfvars --backend-config /c/Users/fatte/humana/git/humana-uat/backend.tfvars
+
+terraform_1.0.11.exe workspace new s001
+
+terraform_1.0.11.exe workspace select s001
+
+terraform_1.0.11.exe plan -out dev.tfplan -var-file=/c/Users/fatte/humana/git/humana-uat/zone.tfvars -var-file=/c/Users/fatte/humana/git/humana-uat/backend.tfvars
+
+terraform_1.0.11.exe apply -state dev.tfstate -var-file=/c/Users/fatte/humana/git/humana-uat/zone.tfvars  -var-file=/c/Users/fatte/humana/git/humana-uat/backend.tfvars
+
+
+```
