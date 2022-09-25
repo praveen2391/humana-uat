@@ -24,7 +24,13 @@ module "resource_group" {
 module "storage_account" {
   source = "git@github.com:praveen2391/humana-tf-modules.git//storage-account"
   location = module.resource_group.location
-  resource_group_name = module.resource_group.resource_group_name
+  resource_group_name = module.resource_group.name
   account_replication_type = "GRS"
   account_tier = "Standard"
+}
+
+module "storage_account_container" {
+  source = "git@github.com:praveen2391/humana-tf-modules.git//storage-account-container"
+  container_name = var.storage_account_container_name
+  storage_account_name = module.storage_account.name
 }
