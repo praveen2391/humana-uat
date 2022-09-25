@@ -1,0 +1,1 @@
+# Shared storage account for storing the terraform statefiles in blob continer
