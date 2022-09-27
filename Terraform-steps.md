@@ -31,16 +31,18 @@
 
     Set your environment variables
 
-    $ export ARM_CLIENT_ID="<APPID_VALUE>"
-    $ export ARM_CLIENT_SECRET="<PASSWORD_VALUE>"
-    $ export ARM_SUBSCRIPTION_ID="<SUBSCRIPTION_ID>"
-    $ export ARM_TENANT_ID="<TENANT_VALUE>"
+    ARM_ACCESS_KEY="storage_account_primary_access_key"
+    export ARM_CLIENT_ID="<APPID_VALUE>"
+    export ARM_CLIENT_SECRET="<PASSWORD_VALUE>"
+    export ARM_SUBSCRIPTION_ID="<SUBSCRIPTION_ID>"
+    export ARM_TENANT_ID="<TENANT_VALUE>"
+    export TF_VAR_ARM_ACCESS_KEY=${ARM_ACCESS_KEY}
     ```
 
     
 ## Terraform commands:
 ```
-terterraform_1.0.11.exe init -var-file=/c/Users/fatte/humana/git/humana-uat/zone.tfvars --backend-config /c/Users/fatte/humana/git/humana-uat/backend.tfvars
+terraform_1.0.11.exe init -var-file=/c/Users/fatte/humana/git/humana-uat/zone.tfvars --backend-config /c/Users/fatte/humana/git/humana-uat/backend.tfvars
 
 terraform_1.0.11.exe workspace new s001
 

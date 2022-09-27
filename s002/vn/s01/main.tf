@@ -16,8 +16,6 @@ provider "azurerm" {
   features {}
 }
 
-
-
 module "resource_group" {
   source = "git@github.com:praveen2391/humana-tf-modules.git//resource-group"
   location = var.location
@@ -26,6 +24,14 @@ module "resource_group" {
   zone = var.zone
 }
 
-module "name" {
-  
+module "vnet" {
+  source = "git@github.com:praveen2391/humana-tf-modules.git//vnet"
+  location = var.location
+  project = var.project
+  lob = var.lob
+  zone = var.zone
+  resource_group_name = module.resource_group.name
+  address_space = var.address_space
+  dns_servers = var.dns_servers
+  law_id = data.terraform_remote_state.log.outputs.law_id
 }
