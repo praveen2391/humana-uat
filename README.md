@@ -14,3 +14,8 @@
 |--|--|--|
 | dss01 | d001 | General Cluster db
 | dss01 | d002 | PC-II cluster db
+
+
+# ToDo:
+- 1) Static Load balancer (can be created in vnet module s002)
+- 2) Nginix -ingress controller (static internal ingress)
